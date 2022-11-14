@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--  /chartjs1/src/main/webapp/barex1.html -->
+<!--  /chartjs/src/main/webapp/barex1.html -->
 <html>
 <head>
 <meta charset="UTF-8">
@@ -20,6 +20,7 @@
 <div id="container" style="width:95%;">
   <canvas id="canvas"></canvas>  <!-- chartjs에 의해 그래프 출력 영역  -->
 </div>
+
 <script type="text/javascript">
    // 배열로 설정 
    const MONTHS = ["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"]
@@ -30,7 +31,7 @@
 			   {           //막대 그래프 한개
 				  label : '영업부실적',   //막대그래프 설명. 범례에 표시됨 
 				  backgroundColor :"#FF90FF",  //막대그래프색상 설정
-				  borderColor : "#000000",     //막대 테두리 색상 설정 
+				  borderColor : "#FF90FF",     //막대 테두리 색상 설정 
 				  borderWidth : 1,             //막대 테두리 굵기 설정 
 				  data:[10,15,25,55,-25,35,65,55,28,43,68,30] //막대의 값 
 			   },
@@ -45,6 +46,7 @@
    }
    //화면 준비 완료.
    window.onload =function(){
+	   //canvas 태그 선택.
 	   let ctx = document.getElementById("canvas").getContext("2d") //그래프 출력 영역 
 	   //막대 그래프 출력 
 	   new Chart(ctx,{
